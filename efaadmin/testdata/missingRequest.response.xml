@@ -1,0 +1,4 @@
+<emailBatchResponse>
+	<sent id="1"/>
+	<error id="2" type="smtp">Error: {'bar@foo.com': (550, '&lt;bar@foo.com&gt;: Recipient address rejected: unknown user')}</error>
+</emailBatchResponse>

@@ -1,0 +1,14 @@
+<emailBatchRequest>
+	<message id="1">
+		<sender address="foo@bar.com"/>
+		<recipient type="to" address="bar@foo.com"/>
+		<header name="subject" value="Test 1"/>
+		<body>Testing 123...</body>
+	</message>
+	<message id="2">
+		<sender address="foo@bar.com"/>
+		<recipient type="to" address="bar@foo.com"/>
+		<header name="subject" value="Test 2"/>
+		<body>Testing 123...</body>
+	</message>
+</emailBatchRequest>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<emailBatchRequest>
+	<message id="1" template="test.verification-email1-txt.xsl">
+		<sender address="efaadmin@aapt.com.au" name="EFA Admin"/>
+		<recipient type="to" address="sviles@iinet.net.au" name="Stephen Viles"/>
+		<header name="Subject" value="Online Billing Confirmation - 4811111"/>
+		<data>
+			<invoice_date>15 December 2004</invoice_date>
+			<account_number>4811111</account_number> 
+			<customer_name>Stevo</customer_name> 
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+			<action_page>https://www.aapt.com.au/onlinebilling.asp</action_page>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<verify_action>action=verify</verify_action>
+			<cancel_action>action=cancel</cancel_action>
+		</data>
+	</message>
+</emailBatchRequest>

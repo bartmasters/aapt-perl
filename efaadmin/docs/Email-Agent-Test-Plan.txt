@@ -1,0 +1,633 @@
+Email Agent Test Cases
+======================
+
+
+Core Functionalities
+--------------------
+
+1. Header generation functionality
+2. In-line Body functionality
+3. Body Template functionality
+4. Body Structure functionality
+
+
+1. Header Generation
+--------------------
+
+Test skeleton XML message:
+
+	<emailBatchRequest>
+		<message id="1">
+			<!-- these sender and recipient items are examples to be replaced with the test case -->
+			<sender address="test@example.com"/>
+			<recipient type="to" address="test@example.com"/>
+			<!-- -->
+			<header name="Subject" value="Test Message"/>
+			<body>Test, please ignore.</body>
+		</message>
+	</emailBatchRequest>
+
+
+1.1 Sender element generates correct From: header
+
+	1.1.1 The address attribute value is mapped correctly
+
+		Input:
+			<sender address="test@example.com"/>
+		Output:
+			From: <test@example.com>
+
+	1.1.2 The name attribute value is mapped correctly
+
+		Input:
+			<sender address="test@example.com" name="Joe Example"/>
+		Output:
+			From: Joe Example <test@example.com>
+
+	1.1.3 The comment attribute is mapped correctly
+
+		Input:
+			<sender address="test@example.com" name="Joe Example" comment="Example Comment"/>
+		Output:
+			From: Joe Example <test@example.com> (Example Comment)
+
+
+1.2 Recipient element generates correct headers To:, Cc: and Bcc: headers.
+
+	1.2.1 The address attribute value is mapped correctly
+
+		Input:
+			<recipient type="to" address="test@example.com"/>
+		Output:
+			To: <test@example.com>
+
+		Input:
+			<recipient type="cc" address="test@example.com"/>
+		Output:
+			Cc: <test@example.com>
+
+		Input:
+			<recipient type="bcc" address="test@example.com"/>
+		Output:
+			Bcc: <test@example.com>
+
+	1.2.2 The name attribute value is mapped correctly
+
+		Input:
+			<recipient type="to" address="test@example.com" name="Joe Example"/>
+		Output:
+			To: Joe Example <test@example.com>
+
+		Input:
+			<recipient type="cc" address="test@example.com" name="Joe Example"/>
+		Output:
+			Cc: Joe Example <test@example.com>
+
+		Input:
+			<recipient type="bcc" address="test@example.com" name="Joe Example"/>
+		Output:
+			Bcc: Joe Example <test@example.com>
+
+	1.2.3 The comment attribute is mapped correctly
+
+		Input:
+			<recipient type="to" address="test@example.com" name="Joe Example" comment="Example Comment"/>
+		Output:
+			To: Joe Example <test@example.com> (Example Comment)
+
+		Input:
+			<recipient type="cc" address="test@example.com" name="Joe Example" comment="Example Comment"/>
+		Output:
+			Cc: Joe Example <test@example.com> (Example Comment)
+
+		Input:
+			<recipient type="bcc" address="test@example.com" name="Joe Example" comment="Example Comment"/>
+		Output:
+			Bcc: Joe Example <test@example.com> (Example Comment)
+
+
+1.3 Header element generates correct headers
+
+	1.3.1 The name and value attributes are mapped correctly
+
+		Input:
+			<header name="Subject" value="Example Subject"/>
+		Output:
+			Subject: Example Subject
+	
+	1.3.2 The name attribute is correctly title-cased
+
+		Input:
+			<header name="subject" value="Example Subject"/>
+		Output:
+			Subject: Example Subject
+
+		Input:
+			<header name="suBjECt" value="Example Subject"/>
+		Output:
+			Subject: Example Subject
+
+		Input:
+			<header name="reply-to" value="&lt;test@example.com&gt;"/>
+		Output:
+			Reply-To: <test@example.com>
+		
+		Input:
+			<header name="x-sPaM-StaTUS" value="no"/>
+		Output:
+			X-Spam-Status: no
+
+
+1.4 Absense of a sender element generates an exception
+
+	Input:
+		<emailBatchRequest>
+			<message id="1">
+				<recipient type="to" address="test@example.com"/>
+				<header name="Subject" value="Test Message"/>
+				<body>Test, please ignore.</body>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchReponse>
+			<error id="1" type="other">Sender not specified.</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+1.5 Lack of at least one recipient element generates an exception
+
+	Input:
+		<emailBatchRequest>
+			<message id="1">
+				<sender address="test@example.com"/>
+				<header name="Subject" value="Test Message"/>
+				<body>Test, please ignore.</body>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchReponse>
+			<error id="1" type="other">No recipients specified.</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+
+2. Inline Body
+--------------
+
+2.1 A message element lacking a template or structure attribute *and* not containing a body child element generates an exception
+
+	Input:
+		<emailBatchRequest>
+			<message id="1">
+				<sender address="test@example.com"/>
+				<recipient type="to" address="test@example.com"/>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchResponse>
+			<error id="1" type="other">Body required if not specifying a template or structure</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+2.2 A message element containing a template or structure attribute *and* having a body child element generates an exception
+
+	Input:
+		<emailBatchRequest>
+			<message id="1" template="foo.xsl">
+				<sender address="test@example.com"/>
+				<recipient type="to" address="test@example.com"/>
+				<body>Test, please ignore.</body>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchResponse>
+			<error id="1" type="other">Template and body specified?</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+	Input:
+		<emailBatchRequest>
+			<message id="1" structure="foo.xml">
+				<sender address="test@example.com"/>
+				<recipient type="to" address="test@example.com"/>
+				<body>Test, please ignore.</body>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchResponse>
+			<error id="1" type="other">Structure and body specified?</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+2.3 The body element is mapped correctly
+
+	Input:
+		<emailBatchRequest>
+			<message id="1">
+				<sender address="test@example.com"/>
+				<recipient type="to" address="test@example.com"/>
+				<header name="subject" value="Test"/>
+				<body>Test, please ignore.</body>
+			</message>
+		</emailBatchRequest>
+	Output:
+		From: <test@example.com>
+		To: <test@example.com>
+		Subject: Test
+
+		Test, please ignore.
+
+
+3. Body Template
+----------------
+
+3.1 A template execution error must generate an exception
+
+	3.1.1 Unavailable template generates an exception
+
+		Pre-Condition:
+			file:///home/test/foo.xsl does not exist.
+		Input:
+			<emailBatchRequest>
+				<message id="1" template="file:///home/test/foo.xsl">
+					<sender address="test@example.com"/>
+					<recipient type="to" address="test@example.com"/>
+					<data/>
+				</message>
+			</emailBatchRequest>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="template">Template not available: file not found.</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+	
+	3.1.2 Invalid template generates exception
+
+		Pre-Condition:
+			file:///home/test/foo.xsl exists but is not valid XSLT
+		Input:
+			<emailBatchRequest>
+				<message id="1" template="file:///home/test/foo.xsl">
+					<sender address="test@example.com"/>
+					<recipient type="to" address="test@example.com"/>
+					<data/>
+				</message>
+			</emailBatchRequest>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="template">Template parse error: ...parse error message...</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+	3.1.3 Runtime template error generates exception
+
+		Pre-Conditions:
+			file:///home/test/foo.xsl is available and is valid XSLT
+			Template processing generates a run-time exception
+		Input:
+			<emailBatchRequest>
+				<message id="1" template="file:///home/test/foo.xsl">
+					<sender address="test@example.com"/>
+					<recipient type="to" address="test@example.com"/>
+					<data/>
+				</message>
+			</emailBatchRequest>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="template">Template execution error: ...runtime error message...</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+
+3.2 Template output must be placed in the body correctly
+
+	Pre-Condition:
+		file:///home/test/foo.xsl contains:
+		<?xml version="1.0" ?>
+		<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+			<xsl:output method="text"/>
+			<xsl:template match="/data">Subject:  Test
+
+		Test, please ignore...</xsl:template>
+		</xsl:stylesheet>
+	Input:
+		<emailBatchRequest>
+			<message id="1" template="file:///home/test/foo.xsl">
+				<sender address="test@example.com"/>
+				<recipient type="to" address="test@example.com"/>
+				<data/>
+			</message>
+		</emailBatchRequest>
+	Output:
+		<emailBatchResponse>
+			<sent id="1"/>
+		</emailBatchResponse>
+	Email:
+		From: <test@example.com>
+		To: <test@example.com>
+		Subject: Test
+
+		Test, please ignore...
+
+
+4. Body Structure
+-----------------
+
+4.1 Structure file errors must generate an exception
+
+	4.1.1 Unavailable structure generates exception
+
+		Pre-Condition:
+			file:///home/test/foo.xml does not exist.
+		Input:
+			<emailBatchRequest>
+				<message id="1" structure="file:///home/test/foo.xml">
+					<sender address="test@example.com"/>
+					<recipient type="to" address="test@example.com"/>
+					<data/>
+				</message>
+			</emailBatchRequest>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="structure">Structure not available: file not found.</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+	4.1.2 Invalid structure generates exception
+
+		Pre-Condition:
+			file:///home/test/foo.xml exists but it not valid XML.
+		Input:
+			<emailBatchRequest>
+				<message id="1" structure="file:///home/test/foo.xml">
+					<sender address="test@example.com"/>
+					<recipient type="to" address="test@example.com"/>
+					<data/>
+				</message>
+			</emailBatchRequest>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="structure">Structure parse error: ...parse error message...</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+
+4.2 Mime element attributes generate correct MIME headers
+
+Test skeleton structure file:
+
+<structure>
+	<mime type="text/plain"/>
+</structure>
+
+	4.2.1 The type attribute is mapped correctly
+
+		Input:
+			<mime type="text/plain"/>
+		Output:
+			Content-Type: text/plain
+		
+		Input:
+			<mime type="text/html"/>
+		Output:
+			Content-Type: text/html
+	
+	4.2.4 The cid attribute is mapped correctly
+
+		Input:
+			<mime type="text/plain" cid="foo:bar@example.com"/>
+		Output:
+			Content-Type: text/plain
+			Content-Id: foo:bar@example.com
+
+	4.2.5 The base attribute is mapped correctly
+
+		Input:
+			<mime type="text/plain" base="http://www.example.com/"/>
+		Output:
+			Content-Type: text/plain
+			Content-Base: http://www.example.com/
+	
+	4.2.6 The location attribute is mapped correctly
+
+		Input:
+			<mime type="text/plain" location="somedir/foo.txt"/>
+		Output:
+			Content-Type: text/plain
+			Content-Transfer-Encoding: somedir/foo.txt
+
+
+4.3 Mime elements correctly encode the body data
+
+Test skeleton structure file:
+
+<structure>
+	<mime type="text/plain" file="file:///home/test/foo.txt"/>
+</structure>
+
+	Input:
+		<mime type="text/plain" file="foo.txt" encoding="7bit"/>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: text/plain
+		Content-Transfer-Encoding: 7bit
+
+		7bit encoded content of foo.txt...
+
+	Input:
+		<mime type="text/plain" file="foo.txt" encoding="8bit"/>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: text/plain
+		Content-Transfer-Encoding: 8bit
+
+		8bit encoded content of foo.txt...
+
+	Input:
+		<mime type="text/plain" file="foo.txt" encoding="base64"/>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: text/plain
+		Content-Transfer-Encoding: base64
+
+		base64 encoded content of foo.txt...
+
+	Input:
+		<mime type="text/plain" file="foo.txt" encoding="quoted-printable"/>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: text/plain
+		Content-Transfer-Encoding: quoted-printable
+
+		quoted-printable encoded content of foo.txt...
+
+
+4.4 The type attribute correctly generates boundry strings for multipart/* types
+
+	Input:
+		<structure>
+			<mime type="multipart/mixed">
+				<mime type="text/plain"/>
+				<mime type="text/html"/>
+				<mime type="image/jpeg"/>
+				<mime type="application/octet-stream"/>
+			</mime>
+		</structure>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: multipart/mixed; boundary="12345-example-boundary-67890"
+
+		--12345-example-boundary-67890
+		Content-Type: text/plain
+
+		--12345-example-boundary-67890
+		Content-Type: text/html
+
+		--12345-example-boundary-67890
+		Content-Type: image/jpeg
+
+		--12345-example-boundary-67890
+		Content-Type: application/octet-stream
+
+		--12345-example-boundary-67890--
+
+
+4.5 Nesting of multipart/* mime elements must work correctly
+
+	Input:
+		<structure>
+			<mime type="multipart/alternative">
+				<mime type="text/plain"/>
+				<mime type="multipart/related">
+					<mime type="text/html"/>
+					<mime type="image/jpeg"/>
+					<mime type="application/octet-stream"/>
+				</mime>
+			</mime>
+		</structure>
+	Output:
+		MIME-Version: 1.0
+		Content-Type: multipart/alternative; boundary="example-boundary-1"
+
+		--example-boundary-1
+		Content-Type: text/plain
+
+		--example-boundary-1
+		Content-Type: multipart/related; boundary="example-boundary-2"
+
+		--example-boundary-2
+		Content-Type: text/html
+
+		--example-boundary-2
+		Content-Type: image/jpeg
+
+		--example-boundary-2
+		Content-Type: application/octet-stream
+
+		--example-boundary-2--
+
+		--example-boundary-1--
+
+
+
+
+4.6 Structure specified source file loading errors must generate an exception
+
+	Pre-Condition:
+		file:///home/test/foo.txt does not exist.
+	Input:
+		<structure>
+			<mime type="text/plain" source="file:///home/test/foo.txt"/>
+		</structure>
+	Output:
+		<emailBatchResponse>
+			<error id="1" type="structure">Structure specified source not available: file not found.</error>
+		</emailBatchResponse>
+	Post-Condition:
+		No SMTP output is generated
+
+
+4.7 Structure specified template execution errors must generate an exception.
+
+	4.7.1 Unavailable structure specified template generates an exception
+
+		Pre-Condition:
+			file:///home/test/foo.xsl does not exist.
+		Input:
+			<structure>
+				<mime type="text/plain" template="file:///home/test/foo.xsl"/>
+			</structure>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="structure">Struction specified template not available: file not found.</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+	
+	4.7.2 Invalid structure specified template generates exception
+
+		Pre-Condition:
+			file:///home/test/foo.xsl exists but is not valid XSLT
+		Input:
+			<structure>
+				<mime type="text/plain" template="file:///home/test/foo.xsl"/>
+			</structure>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="structure">Structure specified template parse error: ...parse error message...</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+	4.7.3 Runtime structure specified template error generates exception
+
+		Pre-Conditions:
+			file:///home/test/foo.xsl is available and is valid XSLT
+			Template processing generates a run-time exception
+		Input:
+			<structure>
+				<mime type="text/plain" template="file:///home/test/foo.xsl"/>
+			</structure>
+		Output:
+			<emailBatchResponse>
+				<error id="1" type="structure">Structure specified template execution error: ...runtime error message...</error>
+			</emailBatchResponse>
+		Post-Condition:
+			No SMTP output is generated
+
+
+4.8 Structure specifying both a template and source file generates an exception
+
+	Input:
+		<structure>
+			<mime type="text/plain" source="file:///home/test/foo.txt" template="file:///home/test/foo.xsl"/>
+		</structure>
+	Output:
+		<emailBatchReponse>
+			<error id="1" type="structure">Structure specifies both a template and source file?</error>
+		</emailBatchResponse>
+
+
+4.9 Absense of a template or source file is not an error and generates an empty body part
+
+	Input:
+		<structure>
+			<mime type="text/plain>
+		</structure>
+	Output:
+		Content-Type: text/plain
+
+	Note:
+		Generates blank line between headers and null body.

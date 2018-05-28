@@ -1,0 +1,45 @@
+# $Id: config.test,v 1.7 2005/01/28 04:12:23 sviles Exp $
+###
+# Setup the PATH, especially put $HOME/bin in it.
+#
+# The path must contain: rm, mv, ssh, scp, sed, find, grep, basename, hostname, whoami.
+###
+PATH=$HOME/bin:$PATH
+export PATH
+
+###
+# EFA server login details.
+###
+USER=efa
+HOST=localhost
+DROP=/var/spool/efa
+
+###
+# Key Scripts & Tools
+###
+REPORT_PROCESSOR=$HOME/bin/processReport.sh
+BATCH_CLEANUP=$HOME/bin/strip.pl
+ENTITY_FIX=$HOME/bin/fixEFAEntityBug.sh
+SENDMAIL=/usr/lib/sendmail
+JAVA=/usr/local/java/bin/java
+LINE_COUNT=$HOME/bin/lineCountAsExitState.pl
+
+###
+# Paths of the files involved.
+###
+TEMP=$HOME/tmp				# path for temp files during processing
+LOGFILE=$TEMP/log-`date +%Y-%m-%d`.txt	# daily log file
+SOURCE_PATH=$HOME/incoming		# temporary location for incoming email batch requests
+RECEIVED_PATH=$HOME/received		# final location for incoming email batch requests
+SENT_PATH=$HOME/sent			# temporary location for sent email batch requests
+REPORT_PATH=$HOME/reports		# final location for reports from Richmond EFA server
+COMPLETED_PATH=$HOME/completed		# final location for sent email batch requests (when matched to report)
+UPLOAD_PATH=$HOME/upload		# temporary location for upload files to Mega
+ARCHIVE_PATH=$HOME/archive		# final location for copy of upload files to Mega
+
+###
+# Email addresses
+###
+FROM_EMAIL="EFA Admin <efaadmin@redfish.opseng.aapt.com.au>"
+ADMIN_EMAIL="Stephen Viles <stephen.viles@aapt.com.au>"
+ONLINE_BILLING_EMAIL="Stephen Viles <stephen.viles@aapt.com.au>"

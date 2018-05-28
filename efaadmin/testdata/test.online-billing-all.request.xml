@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<!-- $Id: test.online-billing-all.request.xml,v 1.5 2005/01/28 01:15:13 sviles Exp $ -->
+<emailBatchRequest>
+	<message id="1" template="test.verification-email1-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of verification-email1-txt"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<account_number>18411328</account_number> 
+			<customer_name>Stephen</customer_name> 
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<verify_action>action=verify</verify_action>
+			<cancel_action>action=cancel</cancel_action>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="2" structure="test.verification-email1-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of verification-email1-html"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<account_number>18411328</account_number> 
+			<customer_name>Stephen</customer_name> 
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<verify_action>action=verify</verify_action>
+			<cancel_action>action=cancel</cancel_action>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="3" template="test.verification-email2-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of verification-email2-txt"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<account_number>18411328</account_number> 
+			<customer_name>Stephen</customer_name> 
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<verify_action>action=verify</verify_action>
+			<cancel_action>action=cancel</cancel_action>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="4" structure="test.verification-email2-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of verification-email2-html"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<account_number>18411328</account_number> 
+			<customer_name>Stephen</customer_name> 
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<verify_action>action=verify</verify_action>
+			<cancel_action>action=cancel</cancel_action>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="5" template="test.confirmation-password-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of confirmation-password-txt"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<customer_name>Stephen</customer_name> 
+			<account_number>18411328</account_number> 
+			<password>chr1stmas</password>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="6" structure="test.confirmation-password-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of confirmation-password-html"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<customer_name>Stephen</customer_name> 
+			<account_number>18411328</account_number> 
+			<password>chr1stmas</password>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>	
+	</message>
+	<message id="7" template="test.confirmation-tempinv-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of confirmation-tempinv-txt"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<customer_name>Stephen</customer_name> 
+			<account_number>18411328</account_number> 
+			<temp_invoice_number>8817996</temp_invoice_number>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="8" structure="test.confirmation-tempinv-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of confirmation-tempinv-html"/>
+		<data>
+			<subscription_type>Online Billing</subscription_type>
+			<customer_name>Stephen</customer_name> 
+			<account_number>18411328</account_number> 
+			<temp_invoice_number>8817996</temp_invoice_number>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>	
+	</message>
+	<message id="9" template="test.invoice-notif-password-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of invoice-notif-password-txt"/>
+		<data>
+			<customer_name>Stephen</customer_name> 
+			<invoice_date>16 December 2004</invoice_date>
+			<account_number>18411328</account_number> 
+			<password>chr1stmas</password>
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<optout_action>action=optout</optout_action>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="10" structure="test.invoice-notif-password-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of invoice-notif-password-html"/>
+		<data>
+			<customer_name>Stephen</customer_name> 
+			<invoice_date>16 December 2004</invoice_date>
+			<account_number>18411328</account_number> 
+			<password>chr1stmas</password>
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<optout_action>action=optout</optout_action>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="11" template="test.invoice-notif-tempinv-txt.xsl">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of invoice-notif-tempinv-txt"/>
+		<data>
+			<customer_name>Stephen</customer_name> 
+			<invoice_date>16 December 2004</invoice_date>
+			<account_number>18411328</account_number> 
+			<temp_invoice_number>8817996</temp_invoice_number>
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<optout_action>action=optout</optout_action>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="12" structure="test.invoice-notif-tempinv-structure.xml">
+		<sender address="onlinebilling@aapt.com.au" name="AAPT Online Billing"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of invoice-notif-tempinv-html"/>
+		<data>
+			<customer_name>Stephen</customer_name> 
+			<invoice_date>16 December 2004</invoice_date>
+			<account_number>18411328</account_number> 
+			<temp_invoice_number>8817996</temp_invoice_number>
+			<action_page>https://www.aapt.com.au/corresp_verify.asp</action_page>
+			<optout_action>action=optout</optout_action>
+			<customer_key>key=09af75f4778bc</customer_key>
+			<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+		</data>
+	</message>
+	<message id="13" template="test.billing-cycle-txt.xsl">
+		<sender address="ISAppsSupport@aapt.com.au" name="ISAppsSupport"/>
+		<recipient type="to" address="Stephen.Viles@aapt.com.au" name="Stephen Viles"/>
+		<header name="subject" value="Test of billing-cycle-txt"/>
+		<data>
+			<cycle_date>15 December 2004</cycle_date>
+			<subscriber_count>13098</subscriber_count> 
+			<notification_count>13098</notification_count>
+			<program_name>CSCB001</program_name>
+			<jcl_name>AKPRCEM1</jcl_name> 
+		</data>
+	</message>
+</emailBatchRequest>

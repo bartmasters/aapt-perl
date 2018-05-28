@@ -1,0 +1,8 @@
+    leading spaces only
+trailing spaces only     
+     both leading and trailing spaces      
+neither leading nor trailing spaces
+     includes    series    of    spaces     
+     
+
+line without \n and with trailing spaces    

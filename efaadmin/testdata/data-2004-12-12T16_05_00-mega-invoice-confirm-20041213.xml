@@ -1,0 +1,598 @@
+<?xml version="1.0" ?> 
+<!-- system message to email agent --> 
+<emailBatchRequest xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"> 
+<message id="1" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="ossiemick@smartchat.net.au" name="Michael Bevan Davis"/> 
+<data> 
+<account_number>1577152</account_number> 
+<customer_name>Michael Bevan</customer_name> 
+<temp_invoice_number>1871606</temp_invoice_number> 
+<call_centre_phone_number>1300 730 103</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="2" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="bilaw@aapt.net.au" name="William Lawless"/> 
+<data> 
+<account_number>2140829</account_number> 
+<customer_name>William</customer_name> 
+<temp_invoice_number>1652320</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="3" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="johnheadley@aapt.net.au" name="John Hedley"/> 
+<data> 
+<account_number>5891188</account_number> 
+<customer_name>John</customer_name> 
+<temp_invoice_number>1154715</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="4" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="cliffys@optusnet.com.au" name="Gerald Clifton"/> 
+<data> 
+<account_number>8429773</account_number> 
+<customer_name>Gerald</customer_name> 
+<temp_invoice_number>1277058</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="5" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="malcat@aapt.net.au" name="Malcolm Gillott"/> 
+<data> 
+<account_number>11156477</account_number> 
+<customer_name>Malcolm</customer_name> 
+<temp_invoice_number>919229</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="6" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="jasonhay@aapt.net.au" name="Danielle Jamieson"/> 
+<data> 
+<account_number>12893762</account_number> 
+<customer_name>Danielle</customer_name> 
+<temp_invoice_number>1116613</temp_invoice_number> 
+<call_centre_phone_number>1800 24 1414</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="7" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="janjim@aapt.net.au" name="Aj Andrews"/> 
+<data> 
+<account_number>12996197</account_number> 
+<customer_name>Aj</customer_name> 
+<temp_invoice_number>1124946</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="8" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="sstokes@aapt.net.au" name="Stephen Stokes"/> 
+<data> 
+<account_number>13044549</account_number> 
+<customer_name>Stephen</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="9" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="jdrule64@aapt.net.au" name="James D Rule"/> 
+<data> 
+<account_number>14143326</account_number> 
+<customer_name>James D</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="10" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="bayliss@aapt.net.au" name="Benjamin Bayuss"/> 
+<data> 
+<account_number>15292771</account_number> 
+<customer_name>Benjamin</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="11" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="kingcarlos_slappy@yahoo.com" name="Linda Fairhall"/> 
+<data> 
+<account_number>16401493</account_number> 
+<customer_name>Linda</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="12" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="asher@smartchat.net.au" name="Helen And Marc Asher"/> 
+<data> 
+<account_number>17130909</account_number> 
+<customer_name>Helen And Marc</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="13" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="terrykucz@aapt.net.au" name="Rhonda/terry Kucz"/> 
+<data> 
+<account_number>17158839</account_number> 
+<customer_name>Rhonda/terry</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="14" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="kerryaj@aapt.net.au" name="Kerry Andrew-jones"/> 
+<data> 
+<account_number>17353221</account_number> 
+<customer_name>Kerry</customer_name> 
+<temp_invoice_number>1455673</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="15" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="iburns@myplace.net.au" name="Ian Burns"/> 
+<data> 
+<account_number>17682899</account_number> 
+<customer_name>Ian Burns</customer_name> 
+<temp_invoice_number>1824624</temp_invoice_number> 
+<call_centre_phone_number>13 88 85</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="16" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="meredithfisher@aapt.net.au" name="Meredith Fisher"/> 
+<data> 
+<account_number>17712998</account_number> 
+<customer_name>Meredith</customer_name> 
+<temp_invoice_number>1485359</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="17" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="tomamich@netspace.net.au" name="Cindy Tomamichel"/> 
+<data> 
+<account_number>18324493</account_number> 
+<customer_name>Cindy</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="18" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="bl_mitchell@excite.com" name="Ben Mitchell"/> 
+<data> 
+<account_number>20780041</account_number> 
+<customer_name>Ben</customer_name> 
+<temp_invoice_number>1728725</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="19" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="newk71@ozemail.com.au" name="Michael Newcombe"/> 
+<data> 
+<account_number>21289565</account_number> 
+<customer_name>Michael</customer_name> 
+<temp_invoice_number>1762213</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="20" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="philgolden@aapt.net.au" name="Philip Golden"/> 
+<data> 
+<account_number>22307473</account_number> 
+<customer_name>Philip</customer_name> 
+<temp_invoice_number>1847823</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="21" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="tmo152@aapt.net.au" name="Theresa Ogilvie"/> 
+<data> 
+<account_number>22570974</account_number> 
+<customer_name>Theresa</customer_name> 
+<temp_invoice_number>1870061</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="22" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="gwhefc@aapt.net.au" name="Gerard Harrison"/> 
+<data> 
+<account_number>23060432</account_number> 
+<customer_name>Gerard</customer_name> 
+<temp_invoice_number>1913109</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="23" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="karenleeplayford@hotmail.com" name="Karen Playford"/> 
+<data> 
+<account_number>23252620</account_number> 
+<customer_name>Karen</customer_name> 
+<temp_invoice_number>1928936</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="24" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="blairbart@aapt.net.au" name="Blair Bartlett"/> 
+<data> 
+<account_number>23508514</account_number> 
+<customer_name>Blair</customer_name> 
+<temp_invoice_number>1950619</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="25" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="peta_allan@aapt.net.au" name="Peta Louise Allan"/> 
+<data> 
+<account_number>23844722</account_number> 
+<customer_name>Peta Louise</customer_name> 
+<temp_invoice_number>1979860</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="26" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="pcwilson@aapt.net.au" name="Christine Wilson"/> 
+<data> 
+<account_number>23942190</account_number> 
+<customer_name>Christine</customer_name> 
+<temp_invoice_number>1988550</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="27" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="vchen@bigpond.net.au" name="Han Ping Chen"/> 
+<data> 
+<account_number>24087430</account_number> 
+<customer_name>Han Ping</customer_name> 
+<temp_invoice_number>2001690</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="28" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="kristin74@aapt.net.au" name="Kristin Williams"/> 
+<data> 
+<account_number>24551207</account_number> 
+<customer_name>Kristin</customer_name> 
+<temp_invoice_number>2043671</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="29" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="sweetsherri@aapt.net.au" name="Tammy Lee"/> 
+<data> 
+<account_number>25308703</account_number> 
+<customer_name>Tammy</customer_name> 
+<temp_invoice_number>2114325</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="30" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="neridajames@aapt.net.au" name="Nerida James"/> 
+<data> 
+<account_number>25528637</account_number> 
+<customer_name>Nerida</customer_name> 
+<temp_invoice_number>2135229</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="31" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="anadim@aapt.net.au" name="Ahmed Nadim"/> 
+<data> 
+<account_number>25837072</account_number> 
+<customer_name>Ahmed</customer_name> 
+<temp_invoice_number>2164648</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="32" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="nippa@aapt.net.au" name="Danielle Oraly"/> 
+<data> 
+<account_number>26028413</account_number> 
+<customer_name>Danielle</customer_name> 
+<temp_invoice_number>2183062</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="33" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="dnc@aapt.net.au" name="Nerida Lopez"/> 
+<data> 
+<account_number>26709552</account_number> 
+<customer_name>Nerida</customer_name> 
+<temp_invoice_number>2248772</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="34" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="egwhite@picknowl.com.au" name="David Eglinton"/> 
+<data> 
+<account_number>27019610</account_number> 
+<customer_name>David</customer_name> 
+<temp_invoice_number>2278884</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="35" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="nutshel@aapt.net.au" name="Michelle Fenn"/> 
+<data> 
+<account_number>27503887</account_number> 
+<customer_name>Michelle</customer_name> 
+<temp_invoice_number>2325844</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="36" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="mikehors@hotkey.net.au" name="Mike Horsman"/> 
+<data> 
+<account_number>27830022</account_number> 
+<customer_name>Mike</customer_name> 
+<temp_invoice_number>2357415</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="37" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="rowley@aapt.net.au" name="Rubina Cobcroft"/> 
+<data> 
+<account_number>27938445</account_number> 
+<customer_name>Rubina</customer_name> 
+<temp_invoice_number>2367758</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="38" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="shereecraig@aapt.net.au" name="Sheree Brown"/> 
+<data> 
+<account_number>27991354</account_number> 
+<customer_name>Sheree</customer_name> 
+<temp_invoice_number>2372821</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="39" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="jackyandjess@aapt.net.au" name="Jacqueline Mott"/> 
+<data> 
+<account_number>28105859</account_number> 
+<customer_name>Jacqueline</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="40" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="bl_mitchell@excite.com" name="Benjamin Mitchell"/> 
+<data> 
+<account_number>28143417</account_number> 
+<customer_name>Benjamin</customer_name> 
+<temp_invoice_number>2387516</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="41" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="corinsmum2004@yahoo.com" name="Cherie Schaeffer"/> 
+<data> 
+<account_number>28220284</account_number> 
+<customer_name>Cherie</customer_name> 
+<temp_invoice_number>2394990</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="42" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="mareem@arrow-int.com.au" name="Marie Moss"/> 
+<data> 
+<account_number>28249681</account_number> 
+<customer_name>Marie</customer_name> 
+<temp_invoice_number>1217232</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="43" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="lesjim@aapt.net.au" name="Lesley Dobos"/> 
+<data> 
+<account_number>28333975</account_number> 
+<customer_name>Lesley</customer_name> 
+<temp_invoice_number>2406062</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="44" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="rik@elands.com" name="Rikki Clausen"/> 
+<data> 
+<account_number>28363334</account_number> 
+<customer_name>Rikki</customer_name> 
+<temp_invoice_number>2408899</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="45" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="katebutcher14@yahoo.com.au" name="Kate Buthcer"/> 
+<data> 
+<account_number>28400219</account_number> 
+<customer_name>Kate</customer_name> 
+<temp_invoice_number>2412523</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="46" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="m.laman@bluecare.org.au" name="Margaret Laman"/> 
+<data> 
+<account_number>28419688</account_number> 
+<customer_name>Margaret</customer_name> 
+<temp_invoice_number>2414402</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="47" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="milind_jadhav@aapt.net.au" name="Millind Jadhav"/> 
+<data> 
+<account_number>28621221</account_number> 
+<customer_name>Millind</customer_name> 
+<temp_invoice_number>2433619</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="48" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="saneplanet@aapt.net.au" name="Ilana Cowan"/> 
+<data> 
+<account_number>28649342</account_number> 
+<customer_name>Ilana</customer_name> 
+<temp_invoice_number>1518666</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="49" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="tomarket@iprimus.com.au" name="Glenn Leckie"/> 
+<data> 
+<account_number>28681513</account_number> 
+<customer_name>Glenn</customer_name> 
+<temp_invoice_number>2439343</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="50" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="blm@aapt.net.au" name="Brad Martin"/> 
+<data> 
+<account_number>28681551</account_number> 
+<customer_name>Brad</customer_name> 
+<temp_invoice_number>2439347</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="51" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="andrew_o@bigpond.net.au" name="Andrew Ollenburg"/> 
+<data> 
+<account_number>28681636</account_number> 
+<customer_name>Andrew</customer_name> 
+<temp_invoice_number>2439355</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="52" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="paris1@summit.net.au" name="Bramwell Bust"/> 
+<data> 
+<account_number>28681643</account_number> 
+<customer_name>Bramwell</customer_name> 
+<temp_invoice_number>2439356</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="53" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="roscoplanetziorg@aapt.net.au" name="Keith Williams"/> 
+<data> 
+<account_number>28681704</account_number> 
+<customer_name>Keith</customer_name> 
+<temp_invoice_number>2439362</temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+<message id="54" template="optin-confirmation.xsl"> 
+<sender address="onlinebilling@aapt.com.au" name="The Team At Aapt"/> 
+<header name="reply-to" value="onlinebilling@aapt.com.au"/> 
+<recipient type="to" address="kerriel@ampco.com.au" name="Kerrie Lawson"/> 
+<data> 
+<account_number>28681728</account_number> 
+<customer_name>Kerrie</customer_name> 
+<temp_invoice_number> </temp_invoice_number> 
+<call_centre_phone_number>13 88 86</call_centre_phone_number> 
+</data> 
+</message> 
+</emailBatchRequest> 

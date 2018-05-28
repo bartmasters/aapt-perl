@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<!-- $Id: bill-invoice-tempinv-structure.xml,v 1.1 2005/03/31 01:50:15 bamaster Exp $ -->
+<structure>
+	<mime type="text/html" template="test.bill-invoice-tempinv-html.xsl"/>
+</structure>
