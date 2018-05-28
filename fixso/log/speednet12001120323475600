@@ -1,0 +1,7 @@
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Started processing for service type speednet1
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Service Order CUSTO20010727733 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 200701 to 20072001
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Service Order CUSTO20010727733 attribute 160 CUT-OVER DATE 	 is being changed	from 160801 to 16082001
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Service Order CUSTO20010727733 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 290801 to 29082001
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Service Order CUSTO20010727733 attribute 320 CPE INSTALL DATE 	 is being changed	from 290801 to 29082001
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) Everything successfully completed for speednet1 - 14 records processed
+Mon Dec  3 23:47:56 2001: glbncs5 fixso2.pl [15605]: Info       - (1113) 4 records updated

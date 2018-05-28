@@ -1,0 +1,96 @@
+Instructions for installing/running fixso.pl
+
+any questions can be directed to me - Bart Masters x1020
+
+1. Overview
+   I have been running some audit reports on BIOSS service orders,
+   to test that their service order attributes are in a correct
+   format (dates are dd-mm-ccyy, if the option is Yes or No, a Y or
+   N has been entered etc).
+   These reports have shown a lot of similar, basic errors.  Fixso.pl
+   is a one-off program that has been written to fix these basic errors
+   in the database.  In theory going forward data will be entered in the
+   correct format, so this will not need to be run/supported regularly.
+
+2. Program Spec
+   *  Open a cursor on table service_orders for all service orders of
+      the service type that is being processed (ie SPEEDNET1, SPEEDNET2
+	  etc).
+   *  Loop through service_orders, and for each service_order, open a 
+      cursor on service_order_attributes that that service order.
+   *  Loop through service_order_attributes, and check each attribute.
+      If the attribute is one of the types listed before, process it.
+
+	  Date
+	  Speednet bit rate
+	  Yes or No
+	  CPE Model ID
+
+	  All other service order attributes are not affected by this
+	  program.
+
+   *  If the attribute is one of the ones listed above - change its
+      value based on the table below.
+
+	  Before			After
+	  
+	  Date 
+	  dd/mm/yy			dd-mm-yyyy
+
+	  Speednet Rate
+	  1.5MEG/256K		1.5M/256k
+	  1.5m/256k			1.5M/256k
+	  1500/256			1.5M/256k
+	  1500kbps/256kbps	1.5M/256k
+	  256/64			256k/64k
+	  512/128			512k/128k
+
+	  Yes or No
+	  yes				Y
+	  y					Y
+
+	  CPE Model ID
+	  827-4V			827 4V
+	  Cisco 827			827
+
+   *  Once the attribute has been changed, update it in the database, and
+      move onto the next record.
+
+3.  Files/logs
+   *  The following file structure is assumed for running fixso.pl
+      fixso/bin/	Location of fixso.pl and shell files
+	  fixso/cfg/	Location of config files
+	  fixso/lib/	Location of additional perl modules
+	  fixso/log/	Location of log files produced by fixso.pl (it uses the
+	  				module aapt::log to produce these)
+	  
+	  Logs are created in log/ with the name   servicetypedate.  These
+	  logs list the records that have been changed, and what changes have
+	  been performed.
+
+4.  Installation/run instructions.
+   *  Files should be extracted from fixso.tar.gz with their directory
+      structure intact, this will place all files in their appropriate
+	  directories.
+	  Within fixso/bin/ are two shell scripts.
+	  
+	  fixso.sh will run fixso.pl against production BIOSS (ie glbncs4, sid
+	  			bioss)
+	  fixsouat.sh will run fixso.pl against buat BIOSS (ie glbncs5, buat)
+	
+	  Both these shell scripts are run with the usage
+	  fixso.sh <username> <password>
+
+	  The username/password are required to connect to bioss.  The
+	  username must have update authority to service_order_attributes in
+	  the appropriate bioss environment (buat or prod).
+
+   *  This can be run from any machine that has perl installed and has 
+      access to glbncs4 and glbncs5.  I've tested it on glbncs5 and it
+	  has worked fine there.
+
+   *  The shell scripts need to be run from the directory they are
+      extracted to (ie from fixso/bin/).
+
+   *  Runtime is not excessive - in the realm of 15-20 seconds elapsed
+      runtime.

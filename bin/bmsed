@@ -1,0 +1,11 @@
+for file in *.cfg	
+do
+   sed -e 's/@LOCATION/{none}/g' -e 's/== a valid BIOSS location code//g' -e 's/gholland@aapt\.com\.au/gholland@aapt\.com\.au,gshort@aapt\.com\.au/g' < $file > $file.new
+done
+
+for file in *.cfg
+do
+   cp $file $file.old
+   mv $file.new $file
+done
+

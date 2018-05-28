@@ -1,0 +1,4 @@
+#!/bin/sh
+LD_LIBRARY_PATH=/opt/sybase/lib:/usr/openwin/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+exec sqsh -Udslradius -Pblueberry -Sase_aaa2 -m vert -E vim -b -p -L history=$HOME/.sqsh_history_dsl

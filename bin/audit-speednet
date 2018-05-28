@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# Script to run biossaudit.pl multiple times,
+# each time feeding it a new type of Speednet
+#
+
+cd /home/bamaster/perl/audit/bin
+biossaudit.pl -s speednet1
+biossaudit.pl -s speednet2
+biossaudit.pl -s speednet2x
+biossaudit.pl -s speednet3 
+biossaudit.pl -s speednet3x
+biossaudit.pl -s speednet4
+biossaudit.pl -s speednet4x

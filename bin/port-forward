@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Quick little daemon to connect Sybase ports on glbins to glbaaa2.
+# Has to run from glbins.
+
+/pkgs/openssh-2.3.0p1-sol5.5.1/bin/ssh -X -L 5000:localhost:5000 -l admin glbaaa2

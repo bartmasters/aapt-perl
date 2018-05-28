@@ -1,0 +1,50 @@
+Subject: order
+
+Carrier details
+----------
+Retail Carrier: AAPT
+Customer Signed Date:18/06/2001
+Retail Carrier Reference No:  AUD1
+Contact Name: David Little 
+Contact Phone: 0282821327
+
+Customer Contact Information
+--------------------------------
+Salutation:	Ms
+First Name:	Chris
+Last Name:	Pashley
+Alternate Phone number: 0292479667
+Fax Number:	0292479667
+Mobile Number:
+Job Title:
+
+Customer site information
+--------------------------
+Company Name	:Knowledge Partners
+Site Notes	:
+Building Type	:L
+Sub Address no	:1
+Street Name	:Kent
+Street Type	:St
+Street Suffix	:
+Suburb Name	:Sydney
+State Name	:NSW
+Postcode	:2000
+NTU Location	:
+
+Service order general Information
+--------------------------
+Zone	:CBD
+Fault Restoration Option	:Standard
+Contract Term	:12Months
+
+
+Product information for ZedBiz-Lite
+--------------------------
+Product Name	:ZedBiz-Lite
+Speed(Peak Information rate)	:256k/64k
+Class of Service (default)	:VBRnrt
+Cast type (default)	:VULL
+POI access port ID	:02TS GORE.F01.023 JK17-18
+VPI	:2
+VCI	:32

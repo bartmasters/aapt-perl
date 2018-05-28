@@ -1,0 +1,76 @@
+#!/usr/local/bin/perl -w
+
+# AuthBy call to check if a particular NAS is set up for the SSG service
+# that it is trying to access.  If not, then reject the request.
+#Hook for CheckSSGExistsOnNAS
+# when an AuthBy RADIUS request is received.
+#
+# Author Bart Masters
+# 30 October 2001
+
+use strict;
+use DBI;
+
+# First, get the input attributes and put them into the %attributes hash.
+
+my %attributes;
+while (<>)
+{
+    chomp;
+
+    if ($_ =~ /^\s*([^\s=]+)\s*=\s*"((\\"|[^"])*)"/)
+    {
+# Quoted value
+		$attributes{$1} = $2;
+    }
+    elsif ($_ =~ /^\s*([^\s=]+)\s*=\s*(.*)/)
+    {
+# Unquoted value
+        $attributes{$1} = $2;
+    }
+	else
+	{
+		print "We have $_\n";
+	}
+}
+
+my $db_source = "dbi:Sybase(AutoCommit=>1):server=ase_dsl2;database=radius";
+my $db_username = "sa";
+my $db_auth = "sysaddsl2";
+
+my $dbh = DBI->connect($db_source, $db_username, $db_auth)
+	|| die "Error connecting to database - Database response code is \n $DBI::errstr";
+
+$dbh->do('use radius')
+	|| die "Error connecting to radius database - Database response code is \n $DBI::errstr";
+	
+my $nasaddr = $attributes{'NAS-IP-Address'};
+my $realm   = $attributes{'User-Name'};
+$realm =~ s/^.*\@//;
+
+# Check if the Realm appears on the NAS
+my $select =	"SELECT A.NAS_ID
+				 FROM 	NAS A,
+				 		NAS_REALM B,
+						SUBSCRIBERS C
+				 WHERE  A.IP = '$nasaddr'
+				 AND    A.NAS_TYPE = 'NAS'
+				 AND    A.NAS_ID   = B.NAS_ID
+				 AND	B.REALM_ID = C.SUB_ID
+				 AND    C.NAME = '$realm'";
+
+my $sth = $dbh->prepare($select);
+$sth->execute()
+	|| die "Error performing query \n $select \n Database response code is $DBI::errstr";
+my $nasid = $sth->fetchrow_array;
+
+if (defined $nasid)
+{
+	print "Reply-Message=\"SSG $realm does exist on NAS $nasaddr - yay\"";
+	exit 0;
+}
+else
+{
+	print "Reply-Message=\"SSG $realm does not exist on NAS $nasaddr - request rejected\"";
+	exit 1;
+}

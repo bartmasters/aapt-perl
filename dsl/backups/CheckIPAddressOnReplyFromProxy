@@ -1,0 +1,188 @@
+#!/pkgs/bin/perl -w
+# Hook for CheckIPAddressOnReplyFromProxy
+# when an AuthBy RADIUS reply is received.
+#
+# Author Mark Pfeiffer <markpf@@mlp-consulting.com.au
+# Copyright (C) 2001 MLP Consulting Pty Ltd
+#
+# In the config file add something like
+# <AuthBy RADIUS>
+#	Host...
+#   Secret...
+#   ...
+#   ReplyHook file:"%D/CheckIPAddressOnReplyFromProxy"
+# </AuthBy>
+#
+# We also expect to find an AuthBy SQL clause that contains a correct connection
+# to the DB we need to look up. We look for the Indentifier 'dbi-interface' thus:
+#
+#  <AuthBy SQL>
+#      Identifier      dbi-interface
+#      DBSource        %{GlobalVar:DSN}
+#      DBUsername      %{GlobalVar:USER}
+#      DBAuth          %{GlobalVar:PASS}
+#        ........
+#  </AuthBy>
+
+#use Data::Dumper;
+
+
+sub rejectit
+{
+    my $p = shift;   # proxy reply packet
+    my $rp = shift;  # reply packet to NAS
+	my $iam = shift; # and ID
+	
+	$p->set_code('Access-Reject');
+	$rp->delete_attr('Framed-IP-Address');
+	$rp->delete_attr('Framed-IP-Netmask');
+	$rp->change_attr('Reply-Message',"Request Denied by $iam");
+}
+
+use NetAddr::IP;
+# $fail = ip_not_in_range($netaddr,$netmask,$ipaddr,$ipmask);
+sub ip_not_in_range
+{
+	my $allowedaddr = shift;  # The base IP allowed
+	my $allowednet  = shift;  # The subnet mask for above
+	my $ipaddr      = shift;  # What we are testing
+	my $ipmask      = shift;  # What we are testing
+
+	# Create the two subnets
+	my $subnet = new NetAddr::IP($allowedaddr,$allowednet);
+	my $testnet = new NetAddr::IP($ipaddr,$ipmask);
+
+	# Test foreach host in the returned subnet to see if it falls within
+	# the allowable range
+	for my $host ( $testnet->enum() )
+	{
+		unless ($subnet->contains($host))
+		{
+			return 1;
+		}
+	}
+
+	return 0;
+}
+
+sub 
+{
+
+    my $p = ${$_[0]};   # proxy reply packet
+    my $rp = ${$_[1]};  # reply packet to NAS
+    my $op = ${$_[2]};  # original request packet
+    my $sp = ${$_[3]};  # packet sent to proxy 
+
+
+	my $iam = "CheckIPAddressOnReplyFromProxy";    
+
+	# Get the request code from the proxy reply.
+    my $code    = $p->code;
+    &main::log($main::LOG_DEBUG, "$iam: called with code = $code");
+
+	# Get hold of an Radius::SqlDb handle to play with
+	my $db = Radius::AuthGeneric::find('dbi-interface');
+	unless($db->reconnect())
+	{
+		&main::log($main::LOG_DEBUG, "$iam: unable to connect to the DB sorry");
+		rejectit($p,$rp,$iam);
+		return;
+	}
+
+	if ($code eq 'Access-Accept')
+    {
+		my $dbh     = $Radius::SqlDb::handles{$db->{dbname}} || die "No DBI handle";
+		my $ipaddr  = $p->get_attr('Framed-IP-Address');
+		my $ipmask  = $p->getAttrByNum($Radius::Radius::FRAMED_IP_NETMASK);
+		my $user    = $op->get_attr('User-Name');
+		my $nasaddr = $op->get_attr('NAS-IP-Address');
+		my $realm   = $user;
+
+		$realm =~ s/^.*\@@//;
+		&main::log($main::LOG_DEBUG, "$iam: IP = $ipaddr, IP Mask = $ipmask");
+
+		# Pick up the Realm information
+		# Get first row of data from the statement.
+		my $select = "select REALM_ID, DEFLT, DEFLT_TYPE from REALM where NAME = '$realm'";
+		my @@row = $dbh->selectrow_array($select);
+		unless(defined $row[2])
+		{
+			&main::log($main::LOG_DEBUG, "$iam: Query Failed - $select");
+			rejectit($p,$rp,$iam);
+			return;
+		}
+		my ($realmid,$attid,$typ) = @@row;
+
+		# Now pick up the NAS information using  the realm info
+		$select = "select a.NAS_ID, b.NAME, b.IP from NAS_REALM a, NAS b where a.REALM_ID = '$realmid' and b.NAS_ID = a.NAS_ID";
+		@@row = $dbh->selectrow_array($select);
+		unless(defined $row[0] && defined $row[1] && defined $row[2])
+		{
+			&main::log($main::LOG_DEBUG, "$iam: Query Failed - $select");
+			rejectit($p,$rp,$iam);
+			return;
+		}
+		my ($nasid,$nasname,$severaddr) = @@row;
+		&main::log($main::LOG_DEBUG, "$iam: Realm = $realm");
+		&main::log($main::LOG_DEBUG, "$iam: Checking Nas $nasname($nasid) IP $nasaddr against $serveraddr");
+		unless($serveraddr eq $nasaddr)
+		{
+			&main::log($main::LOG_DEBUG, "$iam: Checking failed");
+			rejectit($p,$rp,$iam);
+			return;
+		}
+
+		
+		# Test which type of default return we have.
+		my $fail = 1;
+		if( $typ eq 'RNG' )   
+		{
+			# Pickup the all the possible range_ids for this realm
+			my $rows_ref = $dbh->selectall_arrayref("select RANGE_ID from REALM_RNG where REALMID = '$realmid'");
+			for my $r (@@$rows_ref)
+			{
+				my ($rangeid) = @@$r;
+
+				# One row only, get the associated IP/subnet
+				my $select = "select IP, SUBNET from RANGE where RANGE_ID = '$rangeid'";
+				my ($netaddr,$netmask) = $dbh->selectrow_array($select);
+				unless(defined $netaddr and defined $netmask)
+				{
+					&main::log($main::LOG_DEBUG, "$iam: Query failed - $select");
+					next;
+				}
+				&main::log($main::LOG_DEBUG, "$iam: Type = $typ, Base Address = $netaddr, Base Mask = $netmask");
+				
+				$fail = ip_not_in_range($netaddr,$netmask,$ipaddr,$ipmask);
+				&main::log($main::LOG_DEBUG, "$iam: $ipaddr:$ipmask not in Base Address = $netaddr, Base Mask = $netmask range") if $fail;
+				&main::log($main::LOG_DEBUG, "$iam: $ipaddr:$ipmask in Base Address = $netaddr, Base Mask = $netmask range") unless $fail;
+
+				last unless $fail;
+			}
+		}
+		elsif($typ eq 'ATT')
+		{
+			&main::log($main::LOG_DEBUG, "$iam: Attribute lookup not supportted yet $attid");
+			rejectit($p,$rp,$iam);
+			return;
+		}
+		else # Failed
+		{
+			&main::log($main::LOG_DEBUG, "$iam: Realm = $realm: failed to understand Type: $typ");
+			rejectit($p,$rp,$iam);
+			return;
+		}
+
+		if($fail)
+		{
+			rejectit($p,$rp,$iam);
+		}
+
+
+	}
+	else
+	{
+		&main::log($main::LOG_DEBUG, "$iam: ignoring $code");
+	}
+	return;
+}

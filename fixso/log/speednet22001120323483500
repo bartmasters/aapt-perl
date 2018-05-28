@@ -1,0 +1,71 @@
+Mon Dec  3 23:48:35 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Started processing for service type speednet2
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010716676 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 090701 to 09072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010716676 attribute 160 CUTOVER DATE 	 is being changed	from 270701 to 27072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010716676 attribute 310 CABLE/LINE INSTAL DT 	 is being changed	from 020801 to 02082001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010725722 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010725722 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010725722 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010726728 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010726728 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010727731 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 190701 to 19072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010727731 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 220801 to 22082001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010727731 attribute 320 CPE INSTALL DATE 	 is being changed	from 220801 to 22082001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010727734 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 090701 to 09072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010727734 attribute 160 CUT-OVER DATE 	 is being changed	from 060801 to 06082001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010802767 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 170701 to 17072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010802767 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010802767 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010802767 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010806776 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 190701 to 19072001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010806776 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010806776 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010817800 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010829819 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010923881 attribute 160 CUT-OVER DATE 	 is being changed	from 051001 to 05102001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010923881 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 081001 to 08102001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010923881 attribute 320 CPE INSTALL DATE 	 is being changed	from 151001 to 15102001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924891 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924891 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924891 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924896 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924896 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924896 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924901 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 190901 to 19092001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924901 attribute 160 CUT-OVER DATE 	 is being changed	from 041001 to 04102001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20010924901 attribute 320 CPE INSTALL DATE 	 is being changed	from 051001 to 05102001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011004927 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011004927 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011008953 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011008953 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011008953 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011980 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011980 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011980 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011984 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011984 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011011984 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011012005 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011012005 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011012005 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011015012 attribute 160 CUT-OVER DATE 	 is being changed	from 061101 to 06112001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011015012 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 071101 to 07112001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023043 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023043 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023043 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023042 attribute 110 CUSTOMER SIGN DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023042 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023042 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011023042 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011112142 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011112142 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011112142 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011112143 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011112143 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120184 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120184 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120184 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120186 attribute 160 CUT-OVER DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120186 attribute 310 CABLE/LINE INSATLL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Service Order CUSTO20011120186 attribute 320 CPE INSTALL DATE 	 is being changed	from 010401 to 01042001
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) Everything successfully completed for speednet2 - 68 records processed
+Mon Dec  3 23:48:40 2001: glbncs5 fixso2.pl [15611]: Info       - (1113) 68 records updated

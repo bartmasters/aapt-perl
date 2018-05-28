@@ -1,0 +1,42 @@
+
+
+***********************************************************************
+Fatal NI connect error 12547, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=beq)(PROGRAM=/export/oracle/product/8.1.7/bin/oracle)(ARGV0=oracleWF817)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))')(DETACH=NO))(CONNECT_DATA=(CID=(PROGRAM=)(HOST=glbncs5)(USER=bamaster))))
+
+  VERSION INFORMATION:
+	TNS for Solaris: Version 8.0.5.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for Solaris: Version 8.0.5.0.0 - Production
+  Time: 17-SEP-01 01:22:32
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12206
+    TNS-12206: Message 12206 not found; No message file for product=NETWORK, facility=TNS
+    ns main err code: 12547
+    TNS-12547: Message 12547 not found; No message file for product=NETWORK, facility=TNS
+    ns secondary err code: 12560
+    nt main err code: 517
+    TNS-00517: Message 517 not found; No message file for product=NETWORK, facility=TNS
+    nt secondary err code: 32
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12547, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=beq)(PROGRAM=/export/oracle/product/8.1.7/bin/oracle)(ARGV0=oracleWF817)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))')(DETACH=NO))(CONNECT_DATA=(CID=(PROGRAM=)(HOST=glbncs5)(USER=bamaster))))
+
+  VERSION INFORMATION:
+	TNS for Solaris: Version 8.0.5.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for Solaris: Version 8.0.5.0.0 - Production
+  Time: 17-SEP-01 01:22:32
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12206
+    TNS-12206: Message 12206 not found; No message file for product=NETWORK, facility=TNS
+    ns main err code: 12547
+    TNS-12547: Message 12547 not found; No message file for product=NETWORK, facility=TNS
+    ns secondary err code: 12560
+    nt main err code: 517
+    TNS-00517: Message 517 not found; No message file for product=NETWORK, facility=TNS
+    nt secondary err code: 32
+    nt OS err code: 0

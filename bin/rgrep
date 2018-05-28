@@ -1,0 +1,44 @@
+#!/pkgs/bin/perl
+
+use strict;
+
+my $string = join " ", @ARGV; # ugly hack; there must be a better way
+
+unless ($string) 
+{
+    my $error = "Usage: regrep [string]\nRecursively searches all files ";
+    $error .= "in current directory for [string]\n";
+    print $error;
+    exit 1;
+}
+
+# Ideally, we'd parse the arguments better.
+my $directory = shift @ARGV;
+unless ($directory) { $directory = '.'; }
+
+my @grepOutput = `egrep -n "$string" $directory`;
+my $line;
+
+for $line (@grepOutput) 
+{
+    if ($line =~ /^BINARY.*/)
+    {
+	; # do nothing
+    }
+    elsif ($line =~ /^([^:]*)(:)([^:]*)(:)(.*)/) 
+    {
+	print "\033[1;34m";
+	print $1;
+	print "\033[0m";
+	print $2;
+	print "\033[1;36m";
+	print $3;
+	print "\033[0m";
+	print $4;
+	print $5;
+	print $6;
+	print "\n";
+    }
+}
+
+exit 0;

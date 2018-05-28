@@ -1,0 +1,5 @@
+#!/bin/sh
+
+LD_LIBRARY_PATH=/opt/sybase/lib:/usr/openwin/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+sqsh -Usa -Sase_dsl2 -m vert -E vim -b -p

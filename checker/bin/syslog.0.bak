@@ -1,0 +1,64 @@
+Oct 15 15:02:00 glbncs5 sendmail[6166]: PAA06166: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 15 15:02:00 glbncs5 sendmail[6166]: PAA06166: forward /opt/sybase/.forward: Group writable directory
+Oct 15 15:02:01 glbncs5 sendmail[6166]: PAA06166: from=sybase1, size=13738, class=0, pri=43738, nrcpts=1, msgid=<200010151502.PAA06166@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 15 15:02:01 glbncs5 sendmail[6170]: PAA06166: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 15 15:02:01 glbncs5 sendmail[6170]: PAA06166: forward /opt/sybase/.forward: Group writable directory
+Oct 15 15:02:01 glbncs5 sendmail[6170]: PAA06166: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:01, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 15 16:26:44 glbncs5 sendmail[7044]: QAA07044: from=sybase1, size=1526, class=0, pri=31526, nrcpts=1, msgid=<200010151626.QAA07044@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 15 16:26:44 glbncs5 sendmail[7046]: QAA07044: to=sybase@opseng.aapt.com.au, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=relay, relay=mailhost.opseng.aapt.com.au. [192.168.6.194], stat=Sent (QAA04263 Message accepted for delivery)
+Oct 15 18:00:01 glbncs5 sendmail[7753]: SAA07753: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 15 18:00:01 glbncs5 sendmail[7753]: SAA07753: forward /opt/sybase/.forward: Group writable directory
+Oct 15 18:00:01 glbncs5 sendmail[7753]: SAA07753: from=sybase1, size=914, class=0, pri=30914, nrcpts=1, msgid=<200010151800.SAA07753@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 15 18:00:01 glbncs5 sendmail[7757]: SAA07753: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 15 18:00:01 glbncs5 sendmail[7757]: SAA07753: forward /opt/sybase/.forward: Group writable directory
+Oct 15 18:00:01 glbncs5 sendmail[7757]: SAA07753: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 15 23:11:46 glbncs5 sendmail[11823]: XAA11823: forward /export/home/jmadrid/.forward.glbncs5: Group writable directory
+Oct 15 23:11:46 glbncs5 sendmail[11823]: XAA11823: forward /export/home/jmadrid/.forward: Group writable directory
+Oct 15 23:11:46 glbncs5 sendmail[11823]: XAA11823: from=lp, size=291, class=0, pri=30291, nrcpts=1, msgid=<200010152311.XAA11823@glbncs5.opseng.aapt.com.au>, relay=lp@localhost
+Oct 15 23:11:46 glbncs5 sendmail[11827]: XAA11823: forward /export/home/jmadrid/.forward.glbncs5: Group writable directory
+Oct 15 23:11:46 glbncs5 sendmail[11827]: XAA11823: forward /export/home/jmadrid/.forward: Group writable directory
+Oct 15 23:11:46 glbncs5 sendmail[11827]: XAA11823: to=jmadrid, ctladdr=lp (71/8), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 16 15:02:01 glbncs5 sendmail[24961]: PAA24961: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 16 15:02:01 glbncs5 sendmail[24961]: PAA24961: forward /opt/sybase/.forward: Group writable directory
+Oct 16 15:02:01 glbncs5 sendmail[24961]: PAA24961: from=sybase1, size=13739, class=0, pri=43739, nrcpts=1, msgid=<200010161502.PAA24961@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 16 15:02:01 glbncs5 sendmail[24965]: PAA24961: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 16 15:02:01 glbncs5 sendmail[24965]: PAA24961: forward /opt/sybase/.forward: Group writable directory
+Oct 16 15:02:01 glbncs5 sendmail[24965]: PAA24961: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 16 16:26:44 glbncs5 sendmail[26503]: QAA26503: from=sybase1, size=1526, class=0, pri=31526, nrcpts=1, msgid=<200010161626.QAA26503@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 16 16:26:44 glbncs5 sendmail[26505]: QAA26503: to=sybase@opseng.aapt.com.au, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=relay, relay=mailhost.opseng.aapt.com.au. [192.168.6.194], stat=Sent (QAA12043 Message accepted for delivery)
+Oct 16 18:00:01 glbncs5 sendmail[27946]: SAA27946: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 16 18:00:01 glbncs5 sendmail[27946]: SAA27946: forward /opt/sybase/.forward: Group writable directory
+Oct 16 18:00:01 glbncs5 sendmail[27946]: SAA27946: from=sybase1, size=914, class=0, pri=30914, nrcpts=1, msgid=<200010161800.SAA27946@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 16 18:00:01 glbncs5 sendmail[27950]: SAA27946: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 16 18:00:01 glbncs5 sendmail[27950]: SAA27946: forward /opt/sybase/.forward: Group writable directory
+Oct 16 18:00:01 glbncs5 sendmail[27950]: SAA27946: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 17 15:02:00 glbncs5 sendmail[20800]: PAA20800: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 17 15:02:00 glbncs5 sendmail[20800]: PAA20800: forward /opt/sybase/.forward: Group writable directory
+Oct 17 15:02:01 glbncs5 sendmail[20800]: PAA20800: from=sybase1, size=13739, class=0, pri=43739, nrcpts=1, msgid=<200010171502.PAA20800@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 17 15:02:01 glbncs5 sendmail[20804]: PAA20800: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 17 15:02:01 glbncs5 sendmail[20804]: PAA20800: forward /opt/sybase/.forward: Group writable directory
+Oct 17 15:02:01 glbncs5 sendmail[20804]: PAA20800: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:01, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 17 16:27:09 glbncs5 sendmail[22352]: QAA22352: from=sybase1, size=1526, class=0, pri=31526, nrcpts=1, msgid=<200010171627.QAA22352@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 17 16:27:09 glbncs5 sendmail[22354]: QAA22352: to=sybase@opseng.aapt.com.au, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=relay, relay=mailhost.opseng.aapt.com.au. [192.168.6.194], stat=Sent (QAA13691 Message accepted for delivery)
+Oct 17 18:00:02 glbncs5 sendmail[23796]: SAA23796: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 17 18:00:02 glbncs5 sendmail[23796]: SAA23796: forward /opt/sybase/.forward: Group writable directory
+Oct 17 18:00:02 glbncs5 sendmail[23796]: SAA23796: from=sybase1, size=914, class=0, pri=30914, nrcpts=1, msgid=<200010171800.SAA23796@glbncs5.opseng.aapt.com.au>, relay=sybase1@localhost
+Oct 17 18:00:02 glbncs5 sendmail[23800]: SAA23796: forward /opt/sybase/.forward.glbncs5: Group writable directory
+Oct 17 18:00:02 glbncs5 sendmail[23800]: SAA23796: forward /opt/sybase/.forward: Group writable directory
+Oct 17 18:00:02 glbncs5 sendmail[23800]: SAA23796: to=sybase1, ctladdr=sybase1 (10000/10000), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 18 01:28:37 glbncs5 sendmail[12240]: BAA12240: from=bpoulos, size=387, class=0, pri=30387, nrcpts=1, msgid=<200010180128.BAA12240@glbncs5.opseng.aapt.com.au>, relay=bpoulos@localhost
+Oct 18 01:28:38 glbncs5 sendmail[12244]: BAA12240: to=bpoulos, ctladdr=bpoulos (1087/500), delay=00:00:01, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   0: fl=0x2, mode=10000: FIFO: size=228
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   1: fl=0x1, mode=20666: CHR: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   2: fl=0x2, mode=20620: CHR: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   3: fl=0x2000, mode=150444: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   4: fl=0x1, mode=20666: CHR: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=root, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost
+Oct 18 06:19:37 glbncs5 sendmail[19323]: GAA19321: to=root, ctladdr=root (0/1), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Hello!
+
+Oct 16 16:26:44 from=xyz.com.au
+Oct 17 16:26:44 from=xyz.com.au
+
+Oct 19 16:26:44 from=xyz.com.au
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec /pkgs/openssh-2.3.0p1-sol5.5.1/bin/ssh -g -X -L 5000:localhost:5000 -l admin 172.24.75.6

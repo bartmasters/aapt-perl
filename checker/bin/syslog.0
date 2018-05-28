@@ -1,0 +1,9 @@
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   2: fl=0x2, mode=20620: CHR: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   3: fl=0x2000, mode=150444: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: NOQUEUE:   4: fl=0x1, mode=20666: CHR: size=0
+Oct 18 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=root, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost
+Oct 18 06:19:37 glbncs5 sendmail[19323]: GAA19321: to=root, ctladdr=root (0/1), delay=00:00:00, xdelay=00:00:00, mailer=local, stat=Sent
+Oct 24 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=whomever@xyz.com.au, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost
+Oct 24 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=whomever@xyz.com.au, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost
+Oct 24 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=whomever@xyz.com.au, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost
+Oct 24 06:19:37 glbncs5 sendmail[19321]: GAA19321: from=whomever@xyzed.com.au, size=228, class=0, pri=30228, nrcpts=1, msgid=<200010180619.GAA19321@glbncs5.opseng.aapt.com.au>, relay=root@localhost

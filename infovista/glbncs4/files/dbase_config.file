@@ -1,0 +1,8 @@
+# Database config for InfoVista extracts
+# This is used in all the extract programs
+# and needs all 4 entries to be valid.
+ 
+ORACLEID=glbdap1.opseng.aapt.com.au
+SID=bprod
+USERID=syang
+PASSWORD=letmein#101

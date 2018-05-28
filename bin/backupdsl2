@@ -1,0 +1,77 @@
+#!/bin/sh
+# Quick little script to back up various files
+# on GLBDSL2
+
+RADPATH="/home/bamaster/rad"
+ETCPATH="/home/bamaster/etc"
+#RADPATH="/home/rad"
+#ETCPATH="/etc"
+
+# To run this - you have to be logged in as rad or root
+
+set `/usr/bin/id`
+
+#if [ $1 != "uid=0(root)" ]
+#then
+#	echo "You have to run this from the rad or root userid"
+#	exit 1
+#fi
+
+if [ $1 != "uid=1113(bamaster)" ]
+then
+	echo "You have to run this from barts userid"
+	exit 1
+fi
+
+# Make the appropriate directories
+cd $RADPATH/config
+
+if [ -d "backup" ]
+then	echo "$RADPATH/config/backup already exists - exiting"
+	exit 1
+else	mkdir backup
+fi
+
+cd $RADPATH/log
+
+if [ -d "backup" ]
+then	echo "$RADPATH/log/backup already exists - exiting"
+	exit 1
+else	mkdir backup
+fi
+
+cd $RADPATH/isp
+
+if [ -d "backup" ]
+then	echo "$RADPATH/isp/backup already exists - exiting"
+	exit 1
+else	mkdir backup
+fi
+
+cd $ETCPATH 
+if [ -d "backup" ]
+then	echo "$ETCPATH/backup already exists - exiting"
+	exit 1
+else	mkdir backup
+fi
+
+# Now the backup directories are made - back up the files
+
+cd $RADPATH/config/backup
+cp $RADPATH/config/* . 2> /dev/null
+
+cd $RADPATH/log/backup
+cp $RADPATH/log/* . 2> /dev/null
+
+cd $RADPATH/isp/backup
+cp $RADPATH/isp/* . 2> /dev/null
+
+cd $ETCPATH/backup
+cp $ETCPATH/hostname.hme0 .
+cp $ETCPATH/hostname.hme0:1 .
+cp $ETCPATH/hosts .
+cp $ETCPATH/inet/ntp.conf .
+
+# All done, so exit successfully
+echo "All backed up ok"
+exit 0

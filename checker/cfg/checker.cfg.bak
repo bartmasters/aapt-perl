@@ -1,0 +1,12 @@
+# Example Configuration file for checker deamon
+
+ORACLE = haybioss1.opseng.aapt.com.au
+SID = WFADSM  # Oracle Server
+USER = owf_mgr
+PASSWORD = owf_mgr
+POP = wfadsm.opseng.aapt.com.au
+MAILFROM = xyzed.com.au
+# MONITOR = /var/log/syslog
+MONITOR = /home/dlittle/perl/Checker/syslog.0
+LOGHOME = /home/dlittle/perl/Checker/tmp
+# ADMIN = dlittle@aapt.com.au

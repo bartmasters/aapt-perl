@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$1" in
+wf)
+	ORAH="/export/oracle/product/8.1.7"
+	ORAS="BPROD"
+bioss )
+	ORAH="/export/oracle/product/8.1.6"
+	ORAS="WF"
+*)
+	echo "Valid options are wf and bioss"
+esac
+
+export ORACLE_HOME=$ORAH
+export ORACLE_SID=$ORAS
+export PATH=$PATH:$ORACLE_HOME/bin

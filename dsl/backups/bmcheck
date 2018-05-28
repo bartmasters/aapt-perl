@@ -1,0 +1,30 @@
+#!/pkgs/bin/perl -w
+
+# Checking AuthBy External stuff.
+#
+# Author Bart Masters
+# 30 October 2001
+
+my %attributes;
+while (<>)
+{
+    chomp;
+
+    if ($_ =~ /^\s*([^\s=]+)\s*=\s*"((\\"|[^"])*)"/)
+    {
+	# Quoted value
+	$attributes{$1} = $2;
+    }
+    elsif ($_ =~ /^([^\s=]+)\s*=\s*(.*)/)
+    {
+	# Unquoted value
+	$attributes{$1} = $2;
+    }
+}
+
+my ($attrib, $value);
+while (($attrib, $value) = each(%attributes))
+{
+	print "$attrib has a value of $value\n";
+}
+exit 1;

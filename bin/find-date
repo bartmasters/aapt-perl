@@ -1,0 +1,1 @@
+egrep -i '(^date|" date"|[^up]date)' bart.pm

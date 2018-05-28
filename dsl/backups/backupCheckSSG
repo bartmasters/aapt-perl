@@ -1,0 +1,87 @@
+#!/pkgs/bin/perl -w
+
+# Hook for CheckSSGExistsOnNAS
+# when an AuthBy RADIUS request is received.
+#
+# Author Bart Masters
+# 30 October 2001
+#
+# We expect to find an AuthBy SQL clause that contains a correct connection
+# to the DB we need to look up. We look for the Indentifier 'dbi-interface' thus:
+#
+#  <AuthBy SQL>
+#      Identifier      dbi-interface
+#      DBSource        %{GlobalVar:DSN}
+#      DBUsername      %{GlobalVar:USER}
+#      DBAuth          %{GlobalVar:PASS}
+#        ........
+#  </AuthBy>
+
+sub rejectit
+{
+    my $req = shift;	# request packet
+	my $reply = shift;	# reply packet
+	my $iam = shift; 	# and ID
+	
+	$reply->set_code('Access-Reject');
+	$reply->delete_attr('Framed-IP-Address');
+	$reply->delete_attr('Framed-IP-Netmask');
+	$reply->change_attr('Reply-Message',"Request Denied by $iam");
+	return;
+}
+
+use NetAddr::IP;
+
+sub 
+{
+    my $req = ${$_[0]}; 	# request packet
+	my $reply = ${$_[1]}; 	# reply packet to NAS
+	my $iam = "CheckSSGExistsOnNAS";    
+
+	# Get the request code from the proxy reply.
+    my $code    = $req->code;
+    &main::log($main::LOG_DEBUG, "$iam: called with code = $code");
+
+	# Get hold of an Radius::SqlDb handle to play with
+	my $db = Radius::AuthGeneric::find('dbi-interface');
+	unless($db->reconnect())
+	{
+		&main::log($main::LOG_DEBUG, "$iam: unable to connect to the database - rejecting
+		request");
+		rejectit($req,$reply,$iam);
+		return;
+	}
+
+	if ($code eq 'Access-Request')
+    {
+		my $dbh     = $Radius::SqlDb::handles{$db->{dbname}} || die "No DBI handle";
+		my $user    = $req->get_attr('User-Name');
+		my $nasaddr = $req->get_attr('NAS-IP-Address');
+		my $realm   = $user;
+
+		$realm =~ s/^.*\@//;
+		&main::log($main::LOG_DEBUG, "$iam: NAS = $nasaddr, Realm = $realm");
+
+		# Check if the Realm appears on the NAS
+		my $select =	"SELECT NAS_ID
+						 FROM 	NAS A,
+						 		NAS_REALM B
+						 WHERE  A.IP = '$nasaddr'
+						 AND    A.NAS_TYPE = 'NAS'
+						 AND    A.NAS_ID   = B.NAS_ID
+						 AND    B.REALM_ID = '$realm'";
+		my @row = $dbh->selectrow_array($select);
+		unless(defined $row[0])
+		{
+			&main::log($main::LOG_DEBUG, "$iam: SSG $realm does not exist on NAS $nasaddr -
+			request rejected");
+			rejectit($req,$reply,$iam);
+			return;
+		}
+	}	
+	else
+	{
+		&main::log($main::LOG_DEBUG, "$iam: ignoring $code");
+	}
+	return;
+}

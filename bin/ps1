@@ -1,0 +1,5 @@
+#!/bin/sh
+# This is just to change my prompt
+# Coz I think the default is silly
+echo 'test'
+PS1='$PWD > '
